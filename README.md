@@ -1,68 +1,72 @@
-Below is a concise list of the exercises mentioned in your notebook, organized by the three learning sections. These correspond to the tasks you'll need to complete for data manipulation, visualization, and metrics/insights.
+Below is a concise outline of what your final report must include, based on the instructions provided. The report, titled **“Longitudinal Analysis of Antidepressant Prescribing,”** should be split into two main parts (with an optional extension):
 
 ---
 
-## Part 1: **Transforming and Aggregating Data**
+## **Part One: Overall National and Regional Figures**
 
-1. **Question 1**  
-   Nationally, calculate the top 10 prescribed antidepressants (by number of items) across the *entire* time frame, sorted from largest to smallest.
+1. **Annual Prescribing Bar Charts**
+   - Create:
+     - A vertical bar chart showing *total annual antidepressant prescribing (items)*.
+     - A vertical bar chart showing *total annual antidepressant prescribing cost*.
+   - **Explain**:
+     - Describe the observed trends separately (e.g., do prescriptions increase or decrease each year?).
+     - Compare the trends for *items vs. cost* (e.g., does cost change at a different rate than the number of items?).
 
-2. **Question 2**  
-   Calculate the **monthly national cost** of Mirtazapine prescribing.  
-   *(Hint: You’ll need to group or filter for Mirtazapine, then aggregate by “month” or “YEAR_MONTH.”)*
+2. **Annual Prescribing Tables (Regional)**
+   - Create:
+     - A table showing *total annual antidepressant prescribing per region (items)*.
+     - A table showing *annual antidepressant prescribing cost per region*.
+   - **Explain**:
+     - Highlight any standout differences or shifts in prescribing between 2021 and 2024.
+     - Note any regions with particularly high or low prescribing levels vs. cost.
 
-3. **Question 3**  
-   What is the **annual spend** on Sertraline hydrochloride prescribing **in the Midlands region**?  
-   *(Hint: You’ll need to group by “region,” filter for Midlands and Sertraline, then aggregate by “year.”)*
+3. **Top 10 Prescribed Drugs (Items vs. Cost)**
+   - Create:
+     - A horizontal bar chart of the **10 most prescribed** antidepressants (items) over the four-year period.
+     - A horizontal bar chart of the **10 highest-cost** antidepressants over the same period.
+   - **Explain**:
+     - Focus on any differences in ranking between the volume of items and total cost.
+     - Point out where a drug is high in items but not so high in cost (or vice versa).
 
----
-
-## Part 2: **Data Visualization**
-
-1. **Question 1**  
-   Create a **horizontal bar chart** of the **top 5 most prescribed** drugs in **2024**, arranged in descending order (largest to smallest).
-
-2. **Question 2**  
-   Create a **vertical bar chart** showing the **total annual cost** of Sertraline hydrochloride prescribing in the **NORTH WEST** region.
-
-3. **Question 3**  
-   Create a **line chart** of the *national* **monthly cost** (rounded to the nearest pound) of **escitalopram**.
-
----
-
-## Part 3: **Data Metrics and Insights**
-
-> _These use the dataframe `pca_regional_drug_summary_df` mentioned in the instructions._
-
-1. **Question 1**  
-   Create a **monthly line chart** showing the **total national prescribing cost** (all drugs combined).
-
-2. **Question 2**  
-   Create **annual summary statistics** (min, Q1, median, Q3, max) for the **national monthly prescribing cost**.  
-   *(Hint: Summarize monthly cost first, then compute these descriptive statistics per year.)*
-
-3. **Question 3**  
-   Create a **grouped boxplot** for the statistics in Question 2. This will show four boxplots total (one per year).
-
-4. **Question 4**  
-   Calculate the **annual mean monthly total national prescribing cost** and display it in a **vertical bar chart**.
-
-5. **Question 5**  
-   Create a **monthly line chart** showing the **percentage of national prescribing** that is from the **'02: Cardiovascular System'** BNF_CHAPTER.  
-   *(Note: This example shows how to calculate and plot a proportion of the total; the instructions reference cardiovascular prescribing, but the same concept applies to any coordinate data you choose.)*
-
-6. **Question 6**  
-   Create a **pivoted table** that shows the cost of anti-depressant prescribing **per region per year**.  
-   - Each row should represent a year.  
-   - Each column should be a region.  
-   - The values are the *summed cost* of prescribing.
+*Keep the text flowing logically from these results to Part Two.*
 
 ---
 
-### How to Proceed
+## **Part Two: Longitudinal (Monthly) Analysis**
 
-- Use basic pandas operations (filtering, grouping, aggregating) for **Part 1**.  
-- Explore matplotlib, pandas’ built-in `.plot()`, or seaborn for **Part 2** visualizations.  
-- For **Part 3**, consider descriptive statistics methods in pandas (e.g., `.describe()`, `.mean()`, `.min()`, `.max()`, etc.) and pivot tables.  
+1. **Monthly Trend Analysis**
+   - Analyze the *monthly trend* for:
+     - Total antidepressant items prescribed
+     - Total antidepressant prescribing cost
+   - Decide which charts/visuals best illustrate changes over time (e.g., line charts).
 
-Completing these exercises will build your skills in data wrangling, visualization, and higher-level insights—ultimately preparing you to write your final report.
+2. **Identify Key Drugs Driving Trends**
+   - From the monthly data, determine which drugs are causing the most significant shifts, either:
+     - Largest absolute number of items
+     - Largest cost
+     - Rapid increase or decrease month-to-month
+   - Use any combination of tables/charts to support your conclusions.
+
+3. **Summary of Findings**
+   - Provide a **high-level summary** that ties together the monthly trends and identifies clear patterns or anomalies.
+
+---
+
+## **Part Two Extension (Optional): Deeper Dive into Specific Antidepressants**
+
+- **Choose one (or more) antidepressants** that play a significant role in overall volume or cost.  
+- Possible analyses include (but are not limited to):
+  1. **Percentage of total** antidepressant volume or cost contributed by your chosen drug(s).  
+  2. **Mean cost per item** across months or years.  
+  3. **Distribution** of mean cost per item (e.g., boxplots).  
+  4. Any other creative or relevant metrics that highlight prescribing patterns.
+- Conclude with a **summary** explaining how these insights affect the broader national/regional understanding of prescribing costs and volumes.
+
+---
+
+### **Putting It All Together**
+- **Narrative Flow**: Ensure each section transitions smoothly and logically into the next (e.g., Part One findings might shape what you investigate in Part Two).  
+- **Visuals & Tables**: Label your charts clearly, include brief descriptive titles or captions, and refer to them in your text.  
+- **Key Takeaways**: Highlight practical implications for health services, such as areas or drugs that might need policy attention due to volume or cost trends.
+
+By following these steps, you will have a structured, data-driven report that clearly outlines both the overall trends in antidepressant prescribing (Part One) and deeper monthly or drug-specific insights (Part Two/Extension).
