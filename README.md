@@ -70,3 +70,6 @@ Below is a concise outline of what your final report must include, based on the 
 - **Key Takeaways**: Highlight practical implications for health services, such as areas or drugs that might need policy attention due to volume or cost trends.
 
 By following these steps, you will have a structured, data-driven report that clearly outlines both the overall trends in antidepressant prescribing (Part One) and deeper monthly or drug-specific insights (Part Two/Extension).
+
+$\mathbb{E}[\text{# rolls}] \;=\; 6 \;\times\; \bigl(1 + \tfrac{1}{2} + \tfrac{1}{3} + \tfrac{1}{4} + \tfrac{1}{5} + \tfrac{1}{6}\bigr).$
+
