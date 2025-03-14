@@ -1,0 +1,24 @@
+((*- extends 'article.tplx' -*))
+
+((* block docclass *))
+\documentclass[12pt]{article}
+((* endblock docclass *))
+
+((* block extra_packages *))
+% You can load additional packages here if needed
+\usepackage{times}     % Use Times New Roman-ish font
+\usepackage{amsmath}   % Math symbols
+\usepackage{graphicx}  % Include graphics
+((* endblock extra_packages *))
+
+((* block documentheading *))
+\begin{titlepage}
+    \centering
+    \vspace*{4cm}
+    {\Huge \bfseries Antidepressant Prescribing and Cost Analysis in England (2021--2024)\par}
+    \vspace{2cm}
+    {\Large Author: Chuzhou Shao\par}
+    \vspace{2cm}
+    {\large \today\par}
+\end{titlepage}
+((* endblock documentheading *))
