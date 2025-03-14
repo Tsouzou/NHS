@@ -16,13 +16,11 @@ def main():
     )
     y = monthly_df["ITEMS"].astype(float)
 
-    # -----------------------------------------------
-    # Use the last 5 data points for testing, then
+
     # forecast 5 points into the future.
     test_size = 5
     N_future = 5
     train_size = len(y) - test_size
-    # -----------------------------------------------
 
     # 3) Split data
     y_train = y.iloc[:train_size]
@@ -61,7 +59,6 @@ def main():
     if sigma_val is not None and sigma_ci_lower is not None and sigma_ci_upper is not None:
         print(f"  sigma    = {sigma_val:.4f} "
               f"(90% CI: {sigma_ci_lower:.4f}, {sigma_ci_upper:.4f})")
-    ########################################################################
 
     # 5) Create forecasts
     steps_ahead_test = len(y_test)
@@ -75,9 +72,8 @@ def main():
     future_index = np.arange(train_size + test_size,
                              train_size + test_size + N_future)
 
-    ########################################################################
+    
     # MULTI-LAYER CONFIDENCE REGIONS (darker in center = higher probability)
-    ########################################################################
     # Define multiple confidence levels from wider (lighter) to narrower (darker).
     conf_levels = [0.90, 0.70, 0.50]
     # Corresponding alpha for the fill regions (increasingly darker).
